@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/styles.css">
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <div class="landing-page">
+        <div class="add-form">
+            <button class="add-button" id="showFormButton">(+) Add</button>
+            <div id="formInputs" style="display: none;">
+                <select id="nameSelect" placeholder="Nama Karyawan">
+                    <!-- Menampilkan daftar nama karyawan dari data yang sudah ada -->
+                    <option value="" disabled selected>Nama Karyawan</option>
+                    <!-- Data nama awal akan dimasukkan melalui JavaScript -->
+                </select>
+                <label id="dateLabel">Tanggal</label>
+                <div id="jenisInput">
+                    <input type="radio" id="shiftRadio" name="jenis" value="Shift">
+                    <label for="shiftRadio">Shift</label>
+                    <input type="radio" id="cutiRadio" name="jenis" value="Cuti">
+                    <label for="cutiRadio">Cuti</label>
+                </div>
+                <select id="shiftDropdown" style="display: none;">
+                    <option value="" disabled selected>Pilih Shift</option>
+                    <option value="06:00 - 14:00">06:00 - 14:00</option>
+                    <option value="14:00 - 22:00">14:00 - 22:00</option>
+                    <option value="22:00 - 06:00">22:00 - 06:00</option>
+                </select>
+                <input type="text" id="keteranganTextbox" placeholder="Keterangan" style="display: none;">
+                <button class="cancel-button" id="cancelButton">Batal</button>
+                <button class="save-button" id="saveButton">Simpan</button>
+            </div>
+            <p id="notification" style="display: none;">Data telah ditambahkan.</p>
+        </div>
+
+        <div class="tables-container">
+            <div class="attendance-table">
+                <h2>06.00-14.00</h2>
+                <table id="shift1Table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Karyawan</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shift1TableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="attendance-table">
+                <h2>14.00-22.00</h2>
+                <table id="shift2Table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Karyawan</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shift2TableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="attendance-table">
+                <h2>22.00-06.00</h2>
+                <table id="shift3Table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Karyawan</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shift3TableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tables-container">
+            <div class="attendance-table">
+                <h2>Cuti / Libur</h2>
+                <table id="cutiLiburTable">
+                    <thead>
+                        <tr>
+                            <th>Nama Karyawan</th>
+                            <th>Keterangan</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Static data for Cuti / Libur -->
+                        <tr>
+                            <td>Jane Doe</td>
+                            <td>Libur</td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="delete-button">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more table rows with edit and delete buttons as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+/* Common Styles */
+
+.popup {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 400px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    h2 {
+        margin-top: 0;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        margin-top: 10px;
+    }
+    .hidden {
+        display: none;
+    }
+    .button-container {
+        margin-top: 20px;
+        text-align: right;
+        button {
+            margin-left: 10px;
+        }
+    }
+}
+
+
+/* Styles for Popup Form Tambah (.popup-add) */
+
+.popup-add {
+    /* Center the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Add specific styles for Popup Form Tambah here */
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    label {
+        font-weight: bold;
+    }
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+    .shift-dropdown,
+    .cuti-keterangan {
+        margin-top: 10px;
+    }
+    .button-container {
+        margin-top: 20px;
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/* Styles for Popup Form Ubah (.popup-edit) */
+
+.popup-edit {
+    /* Center the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Add specific styles for Popup Form Ubah here */
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    label {
+        font-weight: bold;
+    }
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+    .shift-dropdown,
+    .cuti-keterangan {
+        margin-top: 10px;
+    }
+    .button-container {
+        margin-top: 20px;
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+.landing-page .tables-container .attendance-table h2 {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+    /* Atur ukuran font sesuai kebutuhan Anda */
+}
+
+
+/* Styles for Landing Page (.landing-page) */
+
+.landing-page {
+    /* Center the content horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    width: 50%;
+    max-width: 800px;
+    height: 70%;
+    overflow: auto;
+    margin: 0 auto;
+    /* Center horizontally */
+    .add-button {
+        margin-bottom: 20px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    /* Flex container for tables */
+    .tables-container {
+        display: flex;
+        flex-direction: row;
+        /* Tables will be in a row */
+        flex-wrap: wrap;
+        /* Allow tables to wrap to the next line if necessary */
+        justify-content: space-between;
+        /* Distribute space between tables */
+        width: 100%;
+        /* Occupy full width of the container */
+        /* Individual table styles */
+        .attendance-table {
+            width: calc(33% - 20px);
+            /* Membagi lebar layar menjadi tiga bagian */
+            margin-bottom: 20px;
+            text-align: center;
+            h2 {
+                background-color: #f0f0f0;
+                padding: 10px;
+                margin: 0;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                text-align: center;
+                th,
+                td {
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+.cancel-button {
+    margin-top: 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
